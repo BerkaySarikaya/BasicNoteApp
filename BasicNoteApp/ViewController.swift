@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     private let fullNameTextField = FloatLabelTextField()
     private let emailTextField = FloatLabelTextField()
     private let passwordTextField = FloatLabelTextField()
+    let label3: ReusableLabel = ReusableLabel(labelText: "Already have an account? Sign In", labelType: .font1, labelColor: .black)
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -47,6 +48,16 @@ class ViewController: UIViewController, UITextViewDelegate {
         bodyStackView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(bodyStackView)
         
+        let footerStackView   = UIStackView()
+        footerStackView.axis  = NSLayoutConstraint.Axis.vertical
+        footerStackView.distribution  = UIStackView.Distribution.equalSpacing
+        footerStackView.alignment = UIStackView.Alignment.center
+        footerStackView.spacing   = 24.0
+
+        footerStackView.addArrangedSubview(label3)
+        footerStackView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(footerStackView)
+        
         let stackView   = UIStackView()
         stackView.axis  = NSLayoutConstraint.Axis.vertical
         stackView.distribution  = UIStackView.Distribution.equalSpacing
@@ -55,12 +66,17 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         stackView.addArrangedSubview(headerStackView)
         stackView.addArrangedSubview(bodyStackView)
+        stackView.addArrangedSubview(footerStackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             headerStackView.centerYAnchor.constraint(equalTo: view.topAnchor, constant: 96),
-            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            bodyStackView.topAnchor.constraint(equalTo: headerStackView.bottomAnchor, constant: 24),
+            bodyStackView.bottomAnchor.constraint(equalTo: footerStackView.topAnchor, constant: -100),
+            footerStackView.bottomAnchor.constraint(equalTo: stackView.bottomAnchor)
     ])
     }
 }
