@@ -9,8 +9,6 @@ import UIKit
 class ReusableLabel: UILabel {
     enum LabelTypeEnum {
         case font1
-        case font2
-        case font3
     }
     enum ColorStyle {
         case black
@@ -56,11 +54,7 @@ class ReusableLabel: UILabel {
     private func configureLabelStyle() {
         switch labelType {
         case .font1:
-            self.font = UIFont(name: "Times New Roman", size: 18)
-        case .font2:
-            self.font = UIFont(name: "Ariel", size: 18)
-        case .font3:
-            self.font = UIFont(name: "Verdana", size: 18)
+            self.font = UIFont(name: "Inter", size: 10)
         }
     }
 }
