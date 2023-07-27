@@ -1,10 +1,8 @@
 included:
-  - SampleProject
-  - Utilities
-  - DataProvider
-  - UIComponents
+  - iOS-Guidelines
 excluded:
   - .git
+  - fastlane
   - Pods
 analyzer_rules:
   - unused_declaration
@@ -21,6 +19,7 @@ disabled_rules:
   - modifier_order
   - file_header
   - pattern_matching_keywords
+  - redundant_type_annotation
 opt_in_rules:
   - anyobject_protocol
   - array_init
@@ -98,4 +97,3 @@ custom_rules:
     match_kinds:
       - identifier
     severity: error
-

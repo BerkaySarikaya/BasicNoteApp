@@ -16,11 +16,11 @@ class FullWidthButton: UIButton {
         super.init(frame: .zero)
         self.frame = CGRect(x: 0, y: 0, width: 327, height: 63)
         if isPassive {
-            self.layer.backgroundColor = UIColor(red: 0.5451, green: 0.549, blue: 1, alpha: 1.0).cgColor
-            self.setTitleColor(.white, for: .normal)
+            self.layer.backgroundColor = UIColor(named: "purple50")?.cgColor
+            self.setTitleColor(UIColor(named: "purple100"), for: .normal)
         } else {
-            self.layer.backgroundColor = UIColor(red: 0.8627, green: 0.8627, blue: 1, alpha: 1).cgColor
-            self.setTitleColor(UIColor(red: 0.5451, green: 0.549, blue: 1, alpha: 1.0), for: .normal)
+            self.layer.backgroundColor = UIColor(named: "purple100")?.cgColor
+            self.setTitleColor(.white, for: .normal)
         }
         self.layer.cornerRadius = 5
         self.translatesAutoresizingMaskIntoConstraints = false

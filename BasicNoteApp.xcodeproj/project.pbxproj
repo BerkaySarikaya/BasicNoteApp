@@ -13,6 +13,7 @@
 		CD04ECEF2A5E81F800FF0241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD04ECED2A5E81F800FF0241 /* Main.storyboard */; };
 		CD04ECF12A5E81F900FF0241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD04ECF02A5E81F900FF0241 /* Assets.xcassets */; };
 		CD04ECF42A5E81F900FF0241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD04ECF22A5E81F900FF0241 /* LaunchScreen.storyboard */; };
+		CD7CC6D62A710C28007CEA70 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7CC6D52A710C28007CEA70 /* Colors.xcassets */; };
 		CD90AB612A6A820E0017D8EC /* FloatLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD90AB602A6A820E0017D8EC /* FloatLabel.swift */; };
 		CDC73C5E2A65C4B000D44013 /* ReusableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC73C5D2A65C4B000D44013 /* ReusableLabel.swift */; };
 		CDC73C602A65C6AA00D44013 /* FullWidthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC73C5F2A65C6AA00D44013 /* FullWidthButton.swift */; };
@@ -29,6 +30,7 @@
 		CD04ECF32A5E81F900FF0241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD04ECF52A5E81F900FF0241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD5674BB2A6581A400991B6F /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
+		CD7CC6D52A710C28007CEA70 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CD90AB602A6A820E0017D8EC /* FloatLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatLabel.swift; sourceTree = "<group>"; };
 		CDC73C5D2A65C4B000D44013 /* ReusableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableLabel.swift; sourceTree = "<group>"; };
 		CDC73C5F2A65C6AA00D44013 /* FullWidthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullWidthButton.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				CDC73C5D2A65C4B000D44013 /* ReusableLabel.swift */,
 				CDC73C5F2A65C6AA00D44013 /* FullWidthButton.swift */,
 				CD90AB602A6A820E0017D8EC /* FloatLabel.swift */,
+				CD7CC6D52A710C28007CEA70 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD04ECF42A5E81F900FF0241 /* LaunchScreen.storyboard in Resources */,
+				CD7CC6D62A710C28007CEA70 /* Colors.xcassets in Resources */,
 				CD04ECF12A5E81F900FF0241 /* Assets.xcassets in Resources */,
 				CD04ECEF2A5E81F800FF0241 /* Main.storyboard in Resources */,
 			);

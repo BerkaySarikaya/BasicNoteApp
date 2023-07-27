@@ -14,9 +14,9 @@ class ReusableLabel: UILabel {
     }
     enum ColorStyle {
         case black
-        case darkGray
-        case green
-        case brown
+        case gray
+        case purple50
+        case purple100
         case magenta
         case orange
     }
@@ -40,13 +40,13 @@ class ReusableLabel: UILabel {
     private func configureLabelColor() {
         switch labelColor {
         case .black:
-            self.textColor = .black
-        case .darkGray:
-            self.textColor = .darkGray
-        case .green:
-            self.textColor = .green
-        case .brown:
-            self.textColor = .brown
+            self.textColor = UIColor(named: "textblack")
+        case .gray:
+            self.textColor = UIColor(named: "textgray")
+        case .purple50:
+            self.textColor = UIColor(named: "purple50")
+        case .purple100:
+            self.textColor = UIColor(named: "purple100")
         case .magenta:
             self.textColor = .magenta
         case .orange:
