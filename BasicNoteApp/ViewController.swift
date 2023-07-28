@@ -52,20 +52,28 @@ class ViewController: UIViewController, UITextViewDelegate {
         bodyStackView.addArrangedSubview(fullNameTextField)
         bodyStackView.addArrangedSubview(emailTextField)
         bodyStackView.addArrangedSubview(passwordTextField)
-        bodyStackView.addArrangedSubview(label5)
-        label5.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        label5.leadingAnchor.constraint(equalTo: bodyStackView.leadingAnchor).isActive = true
-        bodyStackView.addArrangedSubview(button1)
         bodyStackView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(bodyStackView)
         
+        let passwordStackView   = UIStackView()
+        passwordStackView.axis  = NSLayoutConstraint.Axis.vertical
+        passwordStackView.distribution  = UIStackView.Distribution.equalSpacing
+        passwordStackView.alignment = UIStackView.Alignment.trailing
+        passwordStackView.spacing = 16
+        passwordStackView.addArrangedSubview(label5)
+        label5.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        passwordStackView.addArrangedSubview(button1)
+        bodyStackView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(passwordStackView)
+    
         let stackView   = UIStackView()
         stackView.axis  = NSLayoutConstraint.Axis.vertical
         stackView.distribution  = UIStackView.Distribution.equalSpacing
-        stackView.alignment = UIStackView.Alignment.center
+        stackView.alignment = UIStackView.Alignment.fill
         stackView.spacing   = 40
         stackView.addArrangedSubview(headerStackView)
         stackView.addArrangedSubview(bodyStackView)
+        stackView.addArrangedSubview(passwordStackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(stackView)
         
@@ -84,12 +92,10 @@ class ViewController: UIViewController, UITextViewDelegate {
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
             guide.bottomAnchor.constraint(equalToSystemSpacingBelow: view.bottomAnchor, multiplier: 1.0),
-            stackView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
             stackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            //headerStackView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 96),
-            //headerStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            //bodyStackView.topAnchor.constraint(equalTo: headerStackView.safeAreaLayoutGuide.bottomAnchor),
-            // bodyStackView.bottomAnchor.constraint(equalTo: footerStackView.safeAreaLayoutGuide.topAnchor, constant: 10),
+            headerStackView.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 96),
+            bodyStackView.topAnchor.constraint(equalTo: headerStackView.safeAreaLayoutGuide.bottomAnchor),
+            bodyStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             footerStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             footerStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
     ])
