@@ -8,18 +8,23 @@
 import UIKit
 
 class ViewController: UIViewController, UITextViewDelegate {
+    
     let label1: ReusableLabel = ReusableLabel(labelText: "Sign Up", labelType: .font1, labelColor: .black)
     let label2: ReusableLabel = ReusableLabel(labelText: "Login or sign up to continue using our app", labelType: .font1, labelColor: .gray)
     let label3: ReusableLabel = ReusableLabel(labelText: "Already have an account?", labelType: .font1, labelColor: .gray)
     let label4: ReusableLabel = ReusableLabel(labelText: "Sign in now", labelType: .font1, labelColor: .purple100)
     let label5: ReusableLabel = ReusableLabel(labelText: "Forgot Password?", labelType: .font1, labelColor: .black)
     let button1: FullWidthButton = FullWidthButton(buttonText: "Sign Up", isPassive: false)
+    
     private let fullNameTextField = FloatLabelTextField()
     private let emailTextField = FloatLabelTextField()
     private let passwordTextField = FloatLabelTextField()
+    
     override func viewDidLoad() {
+        
         label1.font = label1.font.withSize(20)
         super.viewDidLoad()
+        
         let guide = view.safeAreaLayoutGuide
         view.backgroundColor = .white
         view.addSubview(label1)
@@ -31,8 +36,8 @@ class ViewController: UIViewController, UITextViewDelegate {
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
         view.addSubview(button1)
-    
-        let headerStackView   = UIStackView()
+        
+        let headerStackView = UIStackView()
         headerStackView.axis  = NSLayoutConstraint.Axis.vertical
         headerStackView.distribution  = UIStackView.Distribution.equalSpacing
         headerStackView.alignment = UIStackView.Alignment.center
@@ -44,7 +49,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         headerStackView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(headerStackView)
 
-        let bodyStackView   = UIStackView()
+        let bodyStackView = UIStackView()
         bodyStackView.axis  = NSLayoutConstraint.Axis.vertical
         bodyStackView.distribution  = UIStackView.Distribution.equalSpacing
         bodyStackView.alignment = UIStackView.Alignment.fill
@@ -55,7 +60,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         bodyStackView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(bodyStackView)
         
-        let passwordStackView   = UIStackView()
+        let passwordStackView = UIStackView()
         passwordStackView.axis  = NSLayoutConstraint.Axis.vertical
         passwordStackView.distribution  = UIStackView.Distribution.equalSpacing
         passwordStackView.alignment = UIStackView.Alignment.trailing
@@ -66,7 +71,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         bodyStackView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(passwordStackView)
     
-        let stackView   = UIStackView()
+        let stackView = UIStackView()
         stackView.axis  = NSLayoutConstraint.Axis.vertical
         stackView.distribution  = UIStackView.Distribution.equalSpacing
         stackView.alignment = UIStackView.Alignment.fill
@@ -77,7 +82,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(stackView)
         
-        let footerStackView   = UIStackView()
+        let footerStackView = UIStackView()
         footerStackView.axis  = NSLayoutConstraint.Axis.horizontal
         footerStackView.distribution  = UIStackView.Distribution.equalSpacing
         footerStackView.alignment = UIStackView.Alignment.center
@@ -88,7 +93,7 @@ class ViewController: UIViewController, UITextViewDelegate {
         label4.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         footerStackView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(footerStackView)
-            
+        
         NSLayoutConstraint.activate([
             view.topAnchor.constraint(equalToSystemSpacingBelow: guide.topAnchor, multiplier: 1.0),
             guide.bottomAnchor.constraint(equalToSystemSpacingBelow: view.bottomAnchor, multiplier: 1.0),
